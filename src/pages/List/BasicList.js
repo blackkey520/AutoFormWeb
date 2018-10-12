@@ -89,7 +89,7 @@ class BasicList extends PureComponent {
     e.preventDefault();
     const { dispatch, form } = this.props;
     const { current } = this.state;
-    const id = current ? current.id : '';
+    const DB_KEY = current ? current.DB_KEY : '';
 
     setTimeout(() => this.addBtn.blur(), 0);
     form.validateFields((err, fieldsValue) => {
@@ -99,7 +99,7 @@ class BasicList extends PureComponent {
       });
       dispatch({
         type: 'list/submit',
-        payload: { id, ...fieldsValue },
+        payload: { DB_KEY, ...fieldsValue },
       });
     });
   };

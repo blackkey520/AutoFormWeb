@@ -40,6 +40,23 @@ export default [
           },
         ],
       },
+      // AutoForm
+      {
+        path: '/autoform',
+        icon: 'form',
+        name: 'autoform',
+        routes: [{
+            path: '/autoform/dblist',
+            name: 'dbconfig',
+            component: './AutoForm/DataBase/index',
+          },
+          {
+            path: '/autoform/sourceconfig',
+            name: 'sourceconfig',
+            component: './AutoForm/DataSource/index',
+          }
+        ],
+      },
       // forms
       {
         path: '/form',

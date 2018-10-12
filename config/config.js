@@ -35,6 +35,15 @@ export default {
       },
     ],
   ],
+  proxy: {
+    "/api": {
+      target: "http://172.16.9.12:7001/",
+      changeOrigin: true,
+      pathRewrite: {
+        "^/api": ""
+      }
+    }
+  },
   define: {
     APP_TYPE: process.env.APP_TYPE || '',
   },
